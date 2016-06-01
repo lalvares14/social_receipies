@@ -1,0 +1,13 @@
+<%= simple_form_for @recipe do |f| %>
+  <%= f.input :name, label: 'Nome' %>
+  <%= f.input :cuisine, label: 'Cozinha' %>
+  <%= f.input :food_type, label: 'Tipo' %>
+  <%= f.input :preference, label: 'Preferência de comida' %>
+  <%= f.input :portions, label: 'Porções' %>
+  <%= f.input :cook_time, label: 'Tempo de preparo' %>
+  <%= f.input(:difficulty, label: 'Dificuldade',
+              collection:['Fácil', 'Médio', 'Difícil'])%>
+  <%= f.input :ingredients, label: 'Ingredientes' %>
+  <%= f.input :instructions, label: 'Modo de preparo' %>
+  <%= f.button :submit, 'Enviar' %>
+<% end %>
